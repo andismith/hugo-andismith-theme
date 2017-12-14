@@ -1,0 +1,3 @@
+@function icon($key) {
+  @return map-get($icons, $key);
+}

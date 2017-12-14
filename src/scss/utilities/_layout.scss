@@ -1,0 +1,53 @@
+.u-last {
+  @include responsivize() {
+    float: right;
+  }
+}
+
+.u-width--five-sixths {
+  @include responsivize() {
+    width: colspan(10);
+  }
+}
+
+.u-width--three-quarters {
+  @include responsivize() {
+    width: colspan(9);
+  }
+}
+
+.u-width--two-thirds {
+  @include responsivize() {
+    width: colspan(8);
+  }
+}
+
+.u-width--half {
+  @include responsivize() {
+    width: colspan(6);
+  }
+}
+
+.u-width--third {
+  @include responsivize() {
+    width: colspan(4);
+  }
+}
+
+.u-width--quarter {
+  @include responsivize() {
+    width: colspan(3);
+  }
+}
+
+.u-width--sixth {
+  @include responsivize() {
+    width: colspan(2);
+  }
+}
+
+.u-width--twelfth {
+  @include responsivize() {
+    width: colspan(1);
+  }
+}

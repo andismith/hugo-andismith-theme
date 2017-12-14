@@ -1,0 +1,38 @@
+.c-contact {
+  &__item {
+    border: 0;
+    border-bottom: solid $global-spacing-unit-small color(grey-10);
+    padding-bottom: $global-spacing-unit;
+    text-align: center;
+    transition: border 200ms;
+
+    p {
+      margin: 0 auto;
+      max-width: 280px;
+    }
+
+    &:hover {
+      background: color(off-white);
+      border-color: color(brand);
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 24px;
+
+    .icon {
+      fill: #333;
+      height: 120px;
+      width: 120px;
+    }
+
+    &--linkedin .icon {
+      fill: #4284df;
+    }
+
+    &--twitter .icon {
+      fill: #4aade8;
+    }
+  }
+}

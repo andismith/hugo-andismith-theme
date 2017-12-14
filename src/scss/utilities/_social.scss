@@ -1,0 +1,29 @@
+$facebook: color(blue);
+$twitter: color(purple);
+
+.u-facebook,
+.u-twitter {
+  svg {
+    fill: color(grey-10);
+  }
+}
+
+.u-facebook {
+  @include hocus() {
+    border-color: $facebook;
+
+    svg {
+      fill: color(white);
+    }
+  }
+}
+
+.u-twitter {
+  @include hocus() {
+    border-color: $twitter;
+
+    svg {
+      fill: color(white);
+    }
+  }
+}

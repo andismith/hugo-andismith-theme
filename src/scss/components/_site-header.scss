@@ -1,0 +1,22 @@
+.c-site-header {
+  background: color(brand);
+  margin: 0;
+  padding: $global-spacing-unit 0;
+  text-align: center;
+}
+
+.c-site-header__title {
+  @include font(heading-alpha);
+  margin: 0;
+}
+
+.c-site-header__link {
+  color: color(white);
+  text-decoration: none;
+}
+
+.c-site-header__description {
+  color: color(white);
+  margin: 0;
+  text-transform: uppercase;
+}

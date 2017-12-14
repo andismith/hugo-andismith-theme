@@ -1,0 +1,16 @@
+/**
+ * Boxout
+ * Used to improve the look of content on a page that looks a little bare.
+ *
+ */
+
+.c-boxout {
+  background: color(orange);
+  padding: $global-spacing-unit*2;
+}
+
+.c-boxout__item {
+  background: color(white);
+  box-shadow: $global-spacing-unit $global-spacing-unit 0 0 color(rgba(black, .8));
+  margin-bottom: $global-spacing-unit;
+}

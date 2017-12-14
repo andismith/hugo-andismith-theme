@@ -1,0 +1,83 @@
+/**
+ * Button
+ *
+ */
+
+.c-btn {
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: $global-spacing-unit $global-spacing-unit*2;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle; // alignment for when the button size needs to be modified.
+  transition: color $global-animation-speed-simple ease, background-color $global-animation-speed-simple ease, border-color $global-animation-speed-simple ease, box-shadow $global-animation-speed-simple ease;
+
+  @include hocus() {
+    text-decoration: none;
+    outline: none;
+  }
+
+  // Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.c-btn--primary {
+  background: color(success);
+  color: color(white);
+
+  @include hocus() {
+    background: color(brand);
+    border-color: transparent;
+    color: color(white);
+  }
+}
+
+.c-btn--secondary {
+  background: transparent;
+  border-color: color(brand);
+  color: color(brand);
+
+  @include hocus() {
+    background: lighten(color(grey-10), 10);
+    border-color: darken(color(brand), 10);
+  }
+}
+
+.c-btn--negative {
+  background: color(error);
+  color: color(white);
+
+  @include hocus() {
+    background: lighten(color(error), 8);
+    border-color: darken(color(error), 12);
+  }
+}
+
+.c-btn--action {
+  background: transparent;
+  border-color: color(grey-30);
+  color: color(grey-50);
+
+  @include hocus() {
+    color: color(brand);
+  }
+}
+
+.c-btn--action-active {
+  background: color(grey-30);
+  color: color(off-white);
+
+  @include hocus() {
+    background: color(off-white);
+  }
+}
+
+.c-btn--no-flex {
+  min-width: 200px;
+}

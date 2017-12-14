@@ -1,0 +1,10 @@
+<nav class="c-nav" id="navigation">
+  <div class="o-container o-container--full">
+    <ul class="o-list-stack c-nav__list u-centered">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <li class="o-list-inline__item c-nav__item u-width--quarter u-width--sixth@narrow u-width--twelfth@medium"><a href="{{ .URL }}" class="c-nav__link c-nav__link--home{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} c-nav__link--active{{ end }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>

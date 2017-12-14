@@ -1,0 +1,16 @@
+.u-link--invert {
+  border-color: color(off-white);
+  color: color(white);
+
+  @include hocus() {
+    border-color: color(grey-10);
+    color: color(grey-10);
+  }
+}
+
+.u-header-link {
+  border-bottom-style: solid;
+  border-width: 2px;
+  font-weight: bold;
+  text-decoration: none;
+}

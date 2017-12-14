@@ -1,0 +1,49 @@
+/**
+ * Reset
+ * Additional resets beyond what normalize does
+ */
+
+// Remove all margins from certain elements
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: color(brand);
+  text-decoration-color: color(grey-10);
+  -webkit-text-decoration-skip: skip;
+  text-decoration-skip: ink;
+  transition: all $global-animation-speed-simple ease;
+
+  @include hocus() {
+    color: color(black);
+    text-decoration-color: color(grey-30);
+  }
+}
+
+// Remove trailing margins from nested lists
+ul,
+ol {
+  margin-left: $global-spacing-unit*2;
+}
+
+li > {
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+// Table behaviour
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

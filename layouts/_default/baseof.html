@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+<head>
+  <meta charset="utf-8">
+
+	<title>{{ .Title }} - {{ .Site.Title }}</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+
+  <meta name="author" content="Andi Smith" />
+  <meta name="description" content="Web development help and tutorials." />
+  <meta name="keywords" content="andi, smith, es6, html, scss, css, webpack, react" />
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="preload" href="/fonts/roboto-light.woff2" as="font" />
+  <link rel="preload" href="/fonts/roboto-regular.woff2" as="font" />
+  <link rel="preload" href="/fonts/roboto-slab-regular.woff2" as="font" />
+
+  <link rel="dns-prefetch" href="//ssl.google-analytics.com" />
+
+  <link rel="manifest" href="/manifest.json">
+
+  <link href='{{ "/main.css" | absURL }}' rel='stylesheet' type="text/css" />
+
+</head>
+<body>
+  {{ partial "header.html" . }}
+  {{ partial "navigation.html" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partial "footer.html" . }}
+  <script src="{{ "/main.bundle.js" | absURL}}" async></script>
+
+  <script>
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/sw.js', { scope: '/' })
+            .then(function(registration) {
+                console.log('Service Worker Registered');
+            });
+
+        navigator.serviceWorker
+            .ready
+            .then(function(registration) {
+                console.log('Service Worker Ready');
+            });
+    }
+  </script>
+</body>
+</html>

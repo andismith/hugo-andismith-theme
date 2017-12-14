@@ -1,0 +1,78 @@
+.c-share {
+  animation-delay: 600ms;
+  animation-direction: forwards;
+  animation-duration: 400ms;
+  animation-fill-mode: both;
+  animation-name: section-reveal;
+  animation-timing-function: ease-out;
+  left: 0;
+  position: absolute;
+
+  @include mq($from: wide) {
+    left: 50%;
+    transform: translateX(-50%);
+    width: $global-container-width + $global-spacing-unit*8 + 54px;
+  }
+
+  &--fix {
+    position: fixed;
+    top: 0;
+  }
+
+  &__icons {
+    height: 162px;
+    left: 0;
+    position: absolute;
+    top: $global-spacing-unit*2;
+    width: 32px;
+
+    @include mq($from: wide) {
+      width: 54px;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 0;
+    padding: 6px;
+
+    @include mq($from: wide) {
+      padding: 12px;
+    }
+
+    &--facebook {
+      background: #3b5998;
+
+      &:hover {
+        background: darken(#3b5998, 10);
+      }
+    }
+
+    &--linkedin {
+      background: #4284df;
+
+      &:hover {
+        background: darken(#4284df, 10);
+      }
+    }
+
+    &--twitter {
+      background: #4aade8;
+
+      &:hover {
+        background: darken(#4aade8, 10);
+      }
+    }
+  }
+
+  &__icon {
+    height: 20px;
+    fill: color(white);
+    width: 20px;
+
+    @include mq($from: wide) {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+$text: (
+  heading-alpha: (
+    font-family: $global-header-font-family,
+    font-size: 4.8rem,
+    line-height: 1.16
+  ),
+  heading-bravo: (
+    font-family: $global-header-font-family,
+    font-size: 3.5rem,
+    line-height: 1.2
+  ),
+  heading-charlie: (
+    font-family: $global-header-font-family,
+    font-size: 2.5rem,
+    line-height: 1.2
+  ),
+  heading-delta: (
+    font-family: $global-header-font-family,
+    font-size: 2rem,
+    line-height: 1.3
+  ),
+  heading-epsilon: (
+    font-family: $global-header-font-family,
+    font-size: 1.8rem,
+    line-height: 1.3
+  ),
+  text-lead: (
+    font-size: 2.5rem,
+    line-height: 1.44
+  ),
+  text-body: (
+    font-size: 1.8rem,
+    line-height: 1.5
+  ),
+  text-small: (
+    font-size: 1.2rem,
+    line-height: 1.5
+  ),
+  text-code: (
+    font-family: $global-code-family,
+    font-size: 1.6rem,
+    font-weight: 100,
+    line-height: 1.5
+  )
+) !default;

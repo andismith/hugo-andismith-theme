@@ -1,0 +1,44 @@
+/**
+ * Layout
+ * Establish our grid with o-layout.
+ */
+
+@import "sass-mq/mq";
+
+@function colspan($columns: 1) {
+  @return calc(100% / #{$global-columns} * #{$columns});
+}
+
+.o-layout {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.o-layout--reverse {
+  flex-direction: row-reverse;
+}
+
+.o-layout--child {
+  margin-bottom: 0;
+}
+
+.o-layout--wrapper {
+  padding: $global-spacing-unit;
+}
+
+.o-layout__item {
+  margin: 0;
+  padding: $global-spacing-unit*2 $global-spacing-unit*2 0;
+  position: relative;
+  width: 100%;
+}
+
+.o-layout__item--parent {
+  padding: 0;
+}

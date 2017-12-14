@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main class="o-container" role="main">
+  <div class="o-layout">
+    <div class="o-layout__item">
+      <h1 class="c-title">About</h1>
+      {{ .Content }}
+    </div>
+  </div>
+  {{ range where (where .Site.Pages.ByWeight "Type" "=" "about" ) ".Params.main" "!=" true }}
+  <!-- range where .Site.Pages.ByDate.Reverse "Type" "=" "blog-post" }}-->
+  <div id="{{ .Title | urlize }}" class="o-layout">
+    <div class="o-layout__item">
+      <h2 class="c-title">{{ .Title }}</h2>
+    </div>
+    {{ .Content }}
+  </div>
+  {{ end }}
+</main>
+{{ end }}

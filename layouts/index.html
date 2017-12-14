@@ -1,0 +1,43 @@
+{{ define "main" }}
+<main class="o-container" role="main">
+
+  <div class="o-layout o-layout--reverse">
+    <div class="o-layout__item u-centered u-width--third@medium">
+      <img alt="Andi Smith" class="about__profile-image" src="/img/about/profile-small.jpg" srcset="/img/about/profile-large.jpg 768w"  />
+    </div>
+    <div class="o-layout__item u-width--two-thirds@medium">
+      <h1 class="c-title">Hello I'm Andi</h1>
+
+      <p class="u-text-lead">I like to build highly performant websites which innovate with genuine value.</p>
+
+      <ul class="c-status">
+        <li class="c-status__item c-status__item--available">I am <strong>interested</strong> in <a href="/about/#speaking">new speaking opportunities</a>.</li>
+        <li class="c-status__item c-status__item--available">I am <strong>interested</strong> in opportunities to <a href="/about/#writing">write articles and blog posts</a>.</li>
+        <li class="c-status__item c-status__item--unavailable">I am <strong>currently unavailable</strong> to collaborate on new projects.</li>
+      </ul>
+
+      <a href="/contact/" class="c-btn c-btn--primary c-btn--no-flex">Contact me</a>
+      <a href="/about" class="c-btn c-btn--secondary c-btn--no-flex">Learn more</a>
+    </div>
+  </div>
+
+  <div class="o-layout">
+    <div class="o-layout__item">
+      <h1 class="c-title">Blog Posts</h1>
+      {{ .Content }}
+    </div>
+
+    <div class="o-layout o-layout__item o-layout__item--parent">
+    {{ range first 4 (where (where .Site.Pages.ByDate.Reverse "Type" "=" "blog" ) ".Params.archived" "==" nil) }}
+      <div class="o-layout__item c-preview u-width--half">
+        <h2 class="c-preview__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p class="c-preview__date">{{ .Date.Format "Monday, January 2 2006" }}</p>
+        <p class="c-preview__body">{{ .Params.intro }}</p>
+        <p class="c-preview__more"><a href="{{ .Permalink }}">Read more</a></p>
+      </div>
+    {{ end }}
+    </div>
+  </div>
+
+</main>
+{{ end }}

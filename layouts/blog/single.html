@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+  <main class="o-container" role="main">
+
+    {{ if .Params.banner }}
+    <img class="c-banner" src="{{.Params.banner}}" />
+    {{ end }}
+
+    <div class="o-layout js-container">
+
+      {{ partial "share.html" . }}
+      <div class="o-layout__item">
+        <h1 class="c-title">{{ .Title }}</h1>
+
+        <p class="">By Andi Smith - {{ .Date.Format "Monday, January 2 2006" }}</p>
+
+        {{ if .Params.archived }}
+          <div class="c-content c-content--warn"><p><strong>Please note:</strong> This post has been archived and may contain information that is no longer accurate or relevant to the subject matter discussed.</p></div>
+        {{ end }}
+
+        <div class="c-content">
+          {{ .Content }}
+        </div>
+      </div>
+
+      <div class="o-layout__item u-centered u-width--sixth">
+        <img alt="Andi Smith" class="about__profile-image" src="/img/about/profile-small.jpg" />
+      </div>
+      <div class="o-layout__item u-width--five-sixths">
+        <p><strong>Andi Smith</strong> is a web developer from London, United Kingdom. He likes to build highly performant websites which innovate with genuine value.</p>
+      </div>
+    </div>
+
+  </main>
+{{ end }}

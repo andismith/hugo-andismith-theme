@@ -1,0 +1,88 @@
+$nav-height: $global-spacing-unit*5;
+
+.c-nav {
+  background: color(off-black);
+  box-shadow: inset 0 #{-$global-spacing-unit-small} 0 0 color(grey-50);
+  color: color(blue);
+  margin-bottom: $global-spacing-unit*2;
+  padding: 0 $global-spacing-unit;
+}
+
+.c-nav__list {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__link {
+  border-bottom: solid $global-spacing-unit-small transparent;
+  color: color(white);
+  display: block;
+  @include font(text-body);
+  padding: $global-spacing-unit-small;
+  text-decoration: none;
+  transition: all $global-animation-speed-simple;
+
+  @include hocus() {
+    background: color(grey-50);
+    color: color(white);
+  }
+}
+
+.c-nav__link--home {
+  @include hocus() {
+    border-bottom-color: color(blue);
+  }
+
+  &.c-nav__link--active {
+    border-bottom-color: color(blue);
+  }
+}
+
+.c-nav__link--about {
+  @include hocus() {
+    border-bottom-color: color(orange);
+  }
+
+  &.c-nav__link--active {
+    border-bottom-color: color(orange);
+  }
+}
+
+.c-nav__link--blog {
+  @include hocus() {
+    border-bottom-color: color(pink);
+  }
+
+  &.c-nav__link--active {
+    border-bottom-color: color(pink);
+  }
+}
+
+.c-nav__link--contact {
+  @include hocus() {
+    border-bottom-color: color(green);
+  }
+
+  &.c-nav__link--active {
+    border-bottom-color: color(green);
+  }
+}
+
+.c-nav__item--social {
+  align-items: stretch;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.c-nav__link--social {
+  height: $nav-height;
+  padding: $global-spacing-unit;
+}
+
+.c-nav__icon {
+  fill: color(white);
+  height: 25px;
+  padding: 0 $global-spacing-unit-small;
+  width: 50px;
+}

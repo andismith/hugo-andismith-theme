@@ -1,0 +1,24 @@
+{
+  "name": "andismith-styles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:production": "webpack -p",
+    "build": "webpack --progress --colors --watch",
+    "start": "npm run build"
+  },
+  "private": true,
+  "dependencies": {
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
+    "resolve-url-loader": "^2.2.0",
+    "sass-loader": "^6.0.6",
+    "sass-mq": "^3.3.2",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "webpack": "^3.8.1"
+  }
+}

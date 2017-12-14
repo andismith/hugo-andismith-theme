@@ -1,0 +1,111 @@
+/* everything in this component is markdown based, so we need to target elements */
+.c-content {
+
+  &--warn {
+    border-left: solid $global-spacing-unit-small color(error);
+    margin-bottom: $global-spacing-unit*2;
+    padding: $global-spacing-unit $global-spacing-unit*2 1px;
+  }
+
+  > p:first-child {
+    @include font(text-lead);
+  }
+
+  table {
+    max-width: 100%;
+    width: 100%;
+
+    th, td {
+      border-right: solid 1px color(grey-10);
+      padding: $global-spacing-unit $global-spacing-unit*2;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+
+    th {
+      border-bottom: solid 1px color(brand);
+    }
+
+    tr:nth-child(even) td {
+      background: color(off-white);
+    }
+  }
+
+  .scroll {
+    margin-bottom: $global-spacing-unit*2;
+    overflow-x: auto;
+
+    table {
+      margin-bottom: 0;
+      max-width: auto;
+    }
+  }
+
+
+
+  blockquote {
+    padding: $global-spacing-unit*2 $global-spacing-unit*4 0 $global-spacing-unit*3;
+    position: relative;
+
+    &::before {
+      color: color(off-white);
+      content: '“”';
+      display: block;
+      font-family: serif;
+      font-size: 150px;
+      left: $global-spacing-unit;
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-30%);
+      z-index: -1;
+    }
+
+    p {
+      color: color(grey-30);
+      @include font(text-lead);
+    }
+  }
+
+  h2 {
+    @include font(heading-charlie);
+  }
+
+  h3 {
+    @include font(heading-delta);
+  }
+
+  ul > li {
+    @include font(text-body);
+    margin-bottom: $global-spacing-unit-small;
+  }
+
+  aside {
+    border-left: solid $global-spacing-unit-small color(brand);
+    margin-bottom: $global-spacing-unit*2;
+    padding: $global-spacing-unit $global-spacing-unit*2 1px;
+  }
+
+  img,
+  video,
+  iframe {
+    display: block;
+    margin: 0 auto $global-spacing-unit*2;
+    max-width: 100%;
+  }
+
+  code {
+    background: color(off-white);
+    color: color(off-black);
+    display: inline-block;
+    @include font(text-code);
+    padding: 0 $global-spacing-unit-small;
+  }
+
+  pre code {
+    display: block;
+    padding: $global-spacing-unit;
+  }
+}

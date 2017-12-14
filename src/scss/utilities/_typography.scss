@@ -1,0 +1,6 @@
+.u-text-lead {
+  @include font(text-lead);
+}
+.u-text-shadow {
+  text-shadow: 0 0 8px rgba(0,0,0,.4);
+}

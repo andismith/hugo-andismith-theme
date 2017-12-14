@@ -1,0 +1,60 @@
+.c-card {
+  background: #fff;
+  border-radius: $global-spacing-unit;
+  box-shadow: 0 0 $global-spacing-unit rgba(0, 0, 0, .3);
+  overflow: hidden;
+}
+
+.c-card__image {
+  width: 100%;
+}
+
+.c-card__link {
+  display: block;
+  position: relative;
+}
+
+.c-card__border--top {
+  border: solid 2px rgba(color(white), .4);
+  border-bottom: 0;
+  border-radius: $global-border-radius-small $global-border-radius-small 0 0;
+  bottom: 0;
+  left: $global-spacing-unit;
+  position: absolute;
+  right: $global-spacing-unit;
+  top: $global-spacing-unit;
+}
+
+.c-card__border--bottom {
+  border: solid 2px rgba(color(black), .1);
+  border-bottom: 0;
+  border-top: 0;
+  margin: 0 $global-spacing-unit;
+  padding: $global-spacing-unit;
+  text-align: center;
+}
+
+.c-card__buttons {
+  display: flex;
+  font-size: 0;
+  padding: 0 $global-spacing-unit $global-spacing-unit;
+}
+
+.c-card__buttons-lozenge {
+  flex: 1;
+  padding: $global-spacing-unit;
+}
+
+.c-card__buttons-lozenge--start {
+  border-radius: 0 0 0 $global-border-radius-small;
+  border-right: 0;
+}
+
+.c-card__buttons-lozenge--middle {
+  border-radius: 0;
+  border-right: 0;
+}
+
+.c-card__buttons-lozenge--end {
+  border-radius: 0 0 $global-border-radius-small 0;
+}

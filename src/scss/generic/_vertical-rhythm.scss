@@ -1,0 +1,15 @@
+/**
+ * Vertical Rhythm
+ * Apply base spacing as margin bottom to all block level elements
+ * http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ */
+
+h1, h2, h3, h4, h5, h6, hgroup,
+img,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre {
+  margin-bottom: $global-spacing-unit*2;
+}

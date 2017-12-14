@@ -1,0 +1,48 @@
+.c-preview {
+  margin-bottom: $global-spacing-unit*2;
+  padding: $global-spacing-unit*2 $global-spacing-unit*2 0;
+
+  &--hero {
+    background: color(brand);
+  }
+
+  &__title {
+    color: color(brand);
+    @include font(heading-delta);
+    margin-bottom: $global-spacing-unit;
+    text-decoration: none;
+
+    @include mq($from: medium) {
+      @include font(heading-charlie);
+    }
+
+    &--hero {
+      color: color(white);
+    }
+  }
+
+  &__date {
+    color: color(grey-30);
+    margin-bottom: $global-spacing-unit;
+
+    &--hero {
+      color: color(grey-10);
+    }
+  }
+
+  &__body {
+    margin-bottom: $global-spacing-unit;
+
+    &--hero {
+      color: color(white);
+    }
+  }
+
+  &__more {
+    text-align: right;
+
+    &--hero {
+      color: color(white);
+    }
+  }
+}

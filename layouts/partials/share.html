@@ -1,0 +1,14 @@
+{{ $siteUrl := "http://www.andismith.com/" }}
+<aside class="c-share js-share">
+  <div class="c-share__icons">
+    <a class="c-share__link c-share__link--twitter" href="http://twitter.com/home?status={{ $siteUrl }}{{ .Permalink }}">
+      <svg class="c-share__icon"><use xlink:href="/img/icons.svg#icon-twitter"></use></svg>
+    </a>
+    <a class="c-share__link c-share__link--facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ $siteUrl }}{{ .Permalink }}">
+      <svg class="c-share__icon"><use xlink:href="/img/icons.svg#icon-facebook"></use></svg>
+    </a>
+    <a class="c-share__link c-share__link--linkedin" href="http://www.linkedin.com/shareArticle?url={{ $siteUrl }}{{ .Permalink }}">
+      <svg class="c-share__icon"><use xlink:href="/img/icons.svg#icon-linkedin"></use></svg>
+    </a>
+  </div>
+</aside>

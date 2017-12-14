@@ -1,0 +1,18 @@
+$mq-breakpoints: (
+  narrow:     380px,
+  medium:     740px,
+  wide:       980px,
+  extra-wide: 1300px
+);
+
+/*
+@import 'mq';
+
+.foo {
+    @include mq($from: mobile, $until: tablet) {
+        background: red;
+    }
+    @include mq($from: tablet) {
+        background: green;
+    }
+}*/

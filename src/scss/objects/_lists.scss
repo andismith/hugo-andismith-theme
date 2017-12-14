@@ -1,0 +1,29 @@
+/**
+ * List styles
+ * Configure lists without bullet points
+ */
+
+.o-list-bare,
+.o-list-build,
+.o-list-inline,
+.o-list-stack {
+  margin-left: 0;
+  list-style: none;
+}
+
+.o-list-build {
+  overflow: hidden;
+}
+
+.o-list-stack__item {
+  display: block;
+}
+
+.o-list-build__item {
+  display: block;
+  float: left;
+}
+
+.o-list-inline__item {
+  display: inline-block;
+}

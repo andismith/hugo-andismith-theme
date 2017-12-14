@@ -1,0 +1,13 @@
+.c-status {
+  &__item {
+    margin-bottom: $global-spacing-unit;
+  }
+
+  &__item--available strong {
+    color: color(green);
+  }
+
+  &__item--unavailable strong {
+    color: color(orange);
+  }
+}

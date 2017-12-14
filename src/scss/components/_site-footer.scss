@@ -1,0 +1,64 @@
+.c-footer {
+  background: color(off-black);
+  color: color(white);
+  padding: $global-spacing-unit 0;
+
+  &__item {
+    margin-bottom: 0;
+    text-align: center;
+
+    @include mq($from: medium) {
+      text-align: left;
+    }
+  }
+
+  &__social {
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+
+    @include mq($from: medium) {
+      float: right;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 0;
+    padding: 12px;
+
+    @include mq($from: medium) {
+      float: left;
+    }
+
+    &:hover {
+      background: lighten(color(off-black), 20);
+
+      .c-footer__icon--github {
+        fill: #000;
+      }
+
+      .c-footer__icon--instagram {
+        fill: #bc2a8d;
+      }
+
+      .c-footer__icon--lanyrd {
+        fill: #3c80ca;
+      }
+
+      .c-footer__icon--linkedin {
+        fill: #4284df;
+      }
+
+      .c-footer__icon--twitter {
+        fill: #4aade8;
+      }
+    }
+  }
+
+  &__icon {
+    fill: #fff;
+    height: 40px;
+    width: 40px;
+  }
+}

@@ -1,0 +1,13 @@
+/**
+ * Typography
+ * Force all elements to have the exact same *default* styling.
+ * http://csswizardry.com/2016/02/managing-typography-on-large-apps/
+ */
+
+h1, h2, h3, h4, h5, h6, p, input, textarea, button {
+  @include font(text-body);
+  font-weight: normal;
+}
+small {
+  font: inherit;
+}

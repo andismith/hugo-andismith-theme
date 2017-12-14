@@ -1,0 +1,17 @@
+/**
+ * Typography
+ * Define opinionated typographical styles against classes, NOT against
+ * typographic HTML elements.
+ *
+ * https://csswizardry.com/2016/02/managing-typography-on-large-apps/
+ */
+
+// Separate out the properties to get the font size name.
+@each $name, $properties in $text {
+  // Output the font size name with component prefix.
+  .c-#{$name} {
+    @include responsivize() {
+      @include font($name);
+    }
+  }
+}

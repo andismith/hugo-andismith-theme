@@ -1,0 +1,15 @@
+/**
+ * Images
+ * Image resets for responsiveness
+ */
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+// If width or height attribute is explicitly defined, remove max-width
+img[width],
+img[height] {
+  max-width: none;
+}

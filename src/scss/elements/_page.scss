@@ -1,0 +1,28 @@
+/**
+ * Pages
+ * Set page defaults
+ */
+
+html {
+  background: color($global-page-color);
+  color: color($global-text-color);
+  font-family: $global-font-family;
+  font-size: ($global-font-size / 16px) * 1em;
+  line-height: $global-line-height / $global-font-size;
+  min-height: 100%;
+  min-width: 300px;
+  overflow-y: scroll; // force visible scrollbars
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+body {
+  font-size: 1.6rem;
+}
+
+main {
+  min-height: 80vh;
+}

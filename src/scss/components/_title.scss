@@ -1,0 +1,17 @@
+.c-title {
+  border-left: solid $global-spacing-unit-small color(brand);
+  @include font(heading-charlie);
+  padding-left: $global-spacing-unit*2;
+
+  @include mq($from: medium) {
+    @include font(heading-bravo);
+  }
+}
+
+.c-title--secondary {
+  @include font(heading-delta);
+
+  @include mq($from: medium) {
+    @include font(heading-charlie);
+  }
+}
