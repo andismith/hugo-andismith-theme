@@ -5,7 +5,7 @@
   animation-fill-mode: both;
   animation-name: section-reveal;
   animation-timing-function: ease-out;
-  background: rgba(color(grey-50), .8);
+  display: none;
   height: 66px;
   position: fixed;
   top: calc(100% - (#{$global-spacing-unit}*5.5));
@@ -14,6 +14,7 @@
 
   @include mq($from: extra-wide) {
     background: none;
+    display: block;
     left: 50%;
     position: absolute;
     top: auto;

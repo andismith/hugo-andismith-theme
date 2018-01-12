@@ -24,12 +24,9 @@
 
   &__link {
     display: block;
+    float: left;
     font-size: 0;
     padding: 12px;
-
-    @include mq($from: medium) {
-      float: left;
-    }
 
     &:hover {
       background: lighten(color(off-black), 20);
