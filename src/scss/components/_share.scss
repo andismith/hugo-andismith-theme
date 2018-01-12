@@ -5,11 +5,18 @@
   animation-fill-mode: both;
   animation-name: section-reveal;
   animation-timing-function: ease-out;
-  left: 0;
-  position: absolute;
+  background: rgba(color(grey-50), .8);
+  height: 66px;
+  position: fixed;
+  top: calc(100vh - (#{$global-spacing-unit}*5.5));
+  width: 100%;
+  z-index: 1;
 
-  @include mq($from: wide) {
+  @include mq($from: extra-wide) {
+    background: none;
     left: 50%;
+    position: absolute;
+    top: auto;
     transform: translateX(-50%);
     width: $global-container-width + $global-spacing-unit*8 + 54px;
   }
@@ -20,23 +27,25 @@
   }
 
   &__icons {
-    height: 162px;
     left: 0;
+    margin: $global-spacing-unit $global-spacing-unit*2;
     position: absolute;
-    top: $global-spacing-unit*2;
-    width: 32px;
 
-    @include mq($from: wide) {
+    @include mq($from: extra-wide) {
+      height: 162px;
+      margin: 0;
+      top: $global-spacing-unit*2;
       width: 54px;
     }
   }
 
   &__link {
-    display: block;
+    display: inline-block;
     font-size: 0;
     padding: 6px;
 
-    @include mq($from: wide) {
+    @include mq($from: extra-wide) {
+      display: block;
       padding: 12px;
     }
 
@@ -66,13 +75,8 @@
   }
 
   &__icon {
-    height: 20px;
+    height: 30px;
     fill: color(white);
-    width: 20px;
-
-    @include mq($from: wide) {
-      height: 30px;
-      width: 30px;
-    }
+    width: 30px;
   }
 }

@@ -3,13 +3,16 @@ const container = document.querySelector('.js-container');
 let scrollDebounce = false;
 let shareFixed = false;
 
+const mq = window.matchMedia( "(min-width: 1300px)" );
+
 const setSharePosition = () => {
-  if (container) {
+  const fixedCssClass = 'c-share--fix';
+
+  if (container && mq.matches) {
     const topOfPage = container.offsetTop;
     if (!scrollDebounce) {
       scrollDebounce = true;
       window.requestAnimationFrame(() => {
-        const fixedCssClass = 'c-share--fix';
         const scrollPosition = window.scrollY;
         // only update the dom if we have to
         // use shareFixed flag instead of contains to avoid DOM lookup
@@ -23,12 +26,16 @@ const setSharePosition = () => {
         scrollDebounce = false;
       });
     }
+  } else {
+    if (shareFixed) {
+      shareButtons.classList.remove(fixedCssClass);
+    }
   }
 };
 
 
 if (typeof shareButtons !== 'undefined') {
-
   window.onload = setSharePosition;
+  window.onresize = setSharePosition;
   window.onscroll = setSharePosition;
 }
