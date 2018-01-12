@@ -29,7 +29,7 @@
 
     <div class="o-layout o-layout__item o-layout__item--parent">
     {{ range first 4 (where (where .Site.Pages.ByDate.Reverse "Type" "=" "blog" ) ".Params.archived" "==" nil) }}
-      <div class="o-layout__item c-preview u-width--half">
+      <div class="o-layout__item c-preview u-width--half@medium">
         <h2 class="c-preview__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p class="c-preview__date">{{ .Date.Format "Monday, January 2 2006" }}</p>
         <p class="c-preview__body">{{ .Params.intro }}</p>

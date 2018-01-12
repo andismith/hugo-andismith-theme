@@ -9,7 +9,7 @@
     <div class="o-layout o-layout__item o-layout__item--parent">
     {{ range where (where .Site.Pages.ByDate.Reverse "Type" "=" "blog" ) ".Params.archived" "==" nil }}
     <!-- range where .Site.Pages.ByDate.Reverse "Type" "=" "blog-post" }}-->
-      <div class="o-layout__item c-preview {{ if .Params.isHero }}c-preview--hero {{ end }}u-width--half">
+      <div class="o-layout__item c-preview {{ if .Params.isHero }}c-preview--hero {{ end }}u-width--half@medium">
         <h2 class="c-preview__title"><a href="{{ .Permalink }}" class="{{ if .Params.isHero }}c-preview__title--hero{{ end }}">{{ .Title }}</a></h2>
         <p class="c-preview__date {{ if .Params.isHero }}c-preview__date--hero{{ end }}">{{ .Date.Format "Monday, January 2 2006" }}</p>
         <p class="c-preview__body {{ if .Params.isHero }}c-preview__body--hero{{ end }}">{{ .Params.intro }}</p>

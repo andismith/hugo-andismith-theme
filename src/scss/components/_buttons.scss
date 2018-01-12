@@ -8,12 +8,13 @@
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
-  margin: 0;
+  margin: 0 0 $global-spacing-unit;
   padding: $global-spacing-unit $global-spacing-unit*2;
   text-align: center;
   text-decoration: none;
   vertical-align: middle; // alignment for when the button size needs to be modified.
   transition: color $global-animation-speed-simple ease, background-color $global-animation-speed-simple ease, border-color $global-animation-speed-simple ease, box-shadow $global-animation-speed-simple ease;
+  width: 100%;
 
   @include hocus() {
     text-decoration: none;
@@ -24,6 +25,11 @@
   &::-moz-focus-inner {
     border: 0;
     padding: 0;
+  }
+
+  @include mq($from: medium) {
+    margin: 0;
+    width: auto;
   }
 }
 

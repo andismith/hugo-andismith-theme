@@ -8,7 +8,7 @@
   background: rgba(color(grey-50), .8);
   height: 66px;
   position: fixed;
-  top: calc(100vh - (#{$global-spacing-unit}*5.5));
+  top: calc(100% - (#{$global-spacing-unit}*5.5));
   width: 100%;
   z-index: 1;
 
